@@ -1,0 +1,183 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+    text-align: justify;
+}
+
+p {
+    text-align: justify;
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+h1,
+h2 {
+    font: normal 170% "century gothic", arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #000;
+}
+h2 {
+    font-weight: bold;
+    font-size: 140%;
+}
+
+ol {
+    margin: 2px 0 22px 17px;
+}
+
+ol li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+.img {
+    width: 200px;
+    height: 320px;
+}
+
+.btn {
+    align-items: center;
+    color: white;
+    background-color: rgb(238, 100, 153);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+.btn:hover {
+    background: rgb(238, 100, 153);
+}
+
+.btn.btn-big {
+    font-size: 18px;
+    padding: 5px 50px;
+    min-width: 100px;
+}
+
+.btn-close {
+    color: #e60023;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
+    position: absolute;
+    right: 7px;
+    top: 0;
+}
+
+.btn-close:hover {
+    color: #333;
+}
+
+.modal:before {
+    content: "";
+    display: none;
+    background: rgba(252, 251, 251, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.opened:before {
+    display: block;
+}
+
+.opened .modal-dialog {
+    transform: translate(0, 0);
+    top: 20%;
+}
+
+.modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 0px;
+    border-radius: 5px;
+    margin-left: -200px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 450px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(0, -500%);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: #888;
+    outline: 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    max-width: 200px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.product__image-wrapper {
+    margin-bottom: 40px;
+}
+.product__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.product__body {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.product__name {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.products {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 500px;
+}
+.product__price {
+    font-size: 25px;
+    text-align: center;
+}
+.product__footer {
+}
